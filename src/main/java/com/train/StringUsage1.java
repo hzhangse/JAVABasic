@@ -6,7 +6,7 @@ public class StringUsage1 {
 		String a = "abc";
 		// String a = new String("abc");
 		String b = "abc";
-		String c = "a";
+		final String c = "a";
 		String d = c + "bc";
 		String e = "a" + "bc";
 		// String b = new String("abc");
