@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<persons xmlns="http://www.microsoft.com" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://www.microsoft.com http://localhost:8080/family.xsd 
+	 http://www.w3school.com.cn http://localhost:8080/child.xsd">
+	<person>
+		<firstname>David</firstname>
+		<lastname>Smith</lastname>
+		<children>
+			<childname>mike</childname>
+		</children>
+	</person>
+	<person>
+		<firstname>Tony</firstname>
+		<lastname>Smith</lastname>
+	</person>
+</persons>

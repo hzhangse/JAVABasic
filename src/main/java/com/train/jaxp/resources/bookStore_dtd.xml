@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="test/xsl" href="bookStore.xsl"?>
+<!DOCTYPE bookStore PUBLIC "bookStore.dtd" "bookStore.dtd">
+<bookStore name="java" xmlns="http://joey.org/bookStore"
+	xmlns:audlt="http://japan.org/book/audlt" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="bookStore.xsd">
+	<keeper>
+		<name>Joey</name>
+	</keeper>
+	<books>
+		<book id="1">
+			<title>XML</title>
+			<author>Steve</author>
+		</book>
+		<book id="2">
+			<title>JAXP</title>
+			<author>Bill</author>
+		</book>
+		<book id="3" audlt:color="yellow">
+			<audlt:age> &gt;18 </audlt:age>
+			<title>Love</title>
+			<author>teacher</author>
+		</book>
+	</books>
+</bookStore>

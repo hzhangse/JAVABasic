@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns="http://joey.org/bookStore"
+	xmlns:audlt="http://japan.org/book/audlt"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://joey.org/bookStore"
+	elementFormDefault="qualified">
+	
+	
+	<xsd:element name="bookStore" type="bookStoreType"/>
+	
+	
+	<xsd:complexType name="bookStoreType">
+	 
+		<xsd:sequence>
+			<xsd:element name="keeper" type="keeperType"></xsd:element>
+			<xsd:element name="books" type="booksType"></xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="keeperType">
+		<xsd:sequence>
+			<xsd:element name="name" type="xsd:string"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="booksType">
+		<xsd:sequence>
+			<xsd:element name="book" type="bookType"  maxOccurs="unbounded"></xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="bookType">
+		<xsd:sequence>
+			<xsd:element name="title" type="xsd:string"></xsd:element>			
+			<xsd:element name="author" type="xsd:string"></xsd:element>
+			<xsd:any minOccurs="0"/>
+			
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:int" use="required"></xsd:attribute>
+		<xsd:anyAttribute></xsd:anyAttribute>
+		
+	</xsd:complexType>
+	
+	
+	
+
+</xsd:schema>

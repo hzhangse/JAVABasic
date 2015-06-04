@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns="http://www.microsoft.com" 
+	targetNamespace="http://www.microsoft.com"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="persons">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="person" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:group ref="persongroup" />
+							<xs:any></xs:any>
+						</xs:sequence>
+						<xs:attributeGroup ref="personattrgroup" />
+						<xs:anyAttribute></xs:anyAttribute>
+					</xs:complexType>
+
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:group name="persongroup">
+		<xs:sequence>
+			<xs:element name="firstname" type="xs:string" />
+			<xs:element name="lastname" type="xs:string" />
+		</xs:sequence>
+	</xs:group>
+
+	<xs:attributeGroup name="personattrgroup">
+		<xs:attribute name="id" type="xs:string" />
+	</xs:attributeGroup>
+</xs:schema>

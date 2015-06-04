@@ -1,0 +1,9 @@
+<!ELEMENT bookStore (keeper, books)>
+<!ATTLIST bookStore name CDATA #REQUIRED>
+<!ELEMENT keeper (name)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT books (book)>
+<!ELEMENT book (title, author)>
+<!ATTLIST book id ID #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
